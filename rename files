@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+with open(sys.argv[1], "r") as old_files:
+  content1 = old_files.readlines()
+  content2 = [x.strip() for x in content1]
+  print("this is content2", content2)
+  content3 = [item.replace("jane", "jdoe") for item in content2]
+  print("thisis cont3", content3)
+  res = dict(zip(content1, content3))
+  print("am i a dict?", res)
+  for key, value in res.items():
+    key.strip()
+    subprocess.run(["mv", '/home/student-00-7a0184443152/'+key.strip(), '/home/student-00-7a0184443152/'+value]$
+old_files.close()
